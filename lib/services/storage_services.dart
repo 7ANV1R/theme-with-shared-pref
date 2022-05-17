@@ -3,11 +3,11 @@ import 'package:shared_preferences/shared_preferences.dart';
 class UserSimplePreferences {
   static SharedPreferences? _preferences;
 
-  static const _keyUsername = 'counter';
+  static const _keyThemeValue = 'themeValue';
 
   static Future init() async => _preferences = await SharedPreferences.getInstance();
 
-  static Future setUsername(int counter) async => await _preferences?.setInt(_keyUsername, counter);
+  static Future setThemeValue(bool value) async => await _preferences?.setBool(_keyThemeValue, value);
 
-  static int? getUsername() => _preferences?.getInt(_keyUsername);
+  static bool? getThemeValue() => _preferences?.getBool(_keyThemeValue);
 }
