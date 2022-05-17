@@ -31,7 +31,7 @@ class _HomeViewState extends State<HomeView> {
                 onPressed: () async {
                   context.read<HomeCubit>().increment();
                   print('Saved');
-                  await UserSimplePreferences.setUsername(HomeState(state));
+                  await UserSimplePreferences.setUsername(0);
                 },
                 child: Text(
                   name.toString(),
